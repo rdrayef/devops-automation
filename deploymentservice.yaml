@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: spring-boot-k8s-deployments
+  name: spring-boot-k8s-deployment
 spec:
   selector:
     matchLabels:
@@ -28,7 +28,7 @@ metadata: # Metadata of the resource kind we are creating
   name: springboot-k8ssvcs
 spec:
   selector:
-    app: spring-boot-k8s
+    app: spring-boot-k8
   ports:
     - protocol: "TCP"
       port: 80 # The port that the service is running on in the cluster
